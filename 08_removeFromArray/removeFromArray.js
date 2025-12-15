@@ -1,19 +1,18 @@
 
 function removeFromArray(para1, para2){
-    let para1Filtered = para1.filter((item) => {
-        if (item !== 3){
-            return item;
+    let newArr = [];
+    para1.forEach( (item) => {
+        if(!(item === para2)){
+            newArr.push(item);
         }
         else{}
-    });
-    if (para2 !== 3){
-        return para2;
-    }
-    else{}  
-    return para1Filtered;                     
+    }) 
+    console.log(newArr);
+    return newArr;  
 };
-console.log(removeFromArray([1,2,3,4], 3));    
+removeFromArray([1,2,3,4,5,6,2,3,4,5], 3);         
   
+    
   
 
 // Do not edit below this line
