@@ -14,7 +14,7 @@ function convertToFahrenheit (celsiusTemp) {
     return fahrenheitConversion;
 };     
 convertToCelsius(100);    
-convertToFahrenheit(0); 
+convertToFahrenheit(0);  
        
 
 // Do not edit below this line
