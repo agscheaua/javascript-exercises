@@ -1,9 +1,20 @@
-const add = function() {
-	
+
+const add = function (para1, para2) {
+  if ( (typeof para1 && typeof para2) === "number") {
+    return para1 + para2
+  }
+  else {
+    return "not a number";
+  };
 };
 
-const subtract = function() {
-	
+const subtract = function(para1, para2) {
+	if ( (typeof para1 && typeof para2) === "number" ) {
+    return para1 - para2;
+  }
+  else {
+    return "not a number";
+  };
 };
 
 const sum = function() {
