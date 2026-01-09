@@ -1,28 +1,33 @@
 const fibonacci = function(para1) {
-  let myArray = [1];
-  for (let i = 1; i < 100; i++) {
-    if (myArray.length < 2) {
-      myArray.push(i);
-    }
-    else {
-      myArray.push(getLastNr() + getSecondLastNr()); 
-    };
-  };
+  
+  if (para1 === 0) {
+    return 0;
+  }
+  else if (para1 < 0) {
+    return false;
+  }
+  else{};
 
+  let myArray = [1,1];
+ 
   function getLastNr () {
-    let myArrayLastNr = myArray[myArray.length - 1];
-    return myArrayLastNr;
+    return myArray[myArray.length - 1];
   };
   function getSecondLastNr () {
-    let myArraySecondLastNr = myArray[myArray.length - 2];
-    return myArraySecondLastNr;
+    return myArray[myArray.length - 2];
   };
 
-  console.log(myArray); 
+  if (para1 > myArray.length) {
+    for (let i = myArray.length; i <= para1; i++) {
+      myArray.push( getLastNr() + getSecondLastNr() );
+    };  
+  };
 
   return myArray[para1 - 1];
 };
-console.log(fibonacci(246));  
+console.log(fibonacci());  
+
+
 
 // Do not edit below this line
 module.exports = fibonacci;
