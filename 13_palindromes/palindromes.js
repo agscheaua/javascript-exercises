@@ -13,7 +13,14 @@ const palindromes = function (para1) {
   };
 };
 
-console.log(palindromes("racecar"));
+const palindromes2 = function (para1) {
+  const splitWord = para1.split('');
+  const reverseWord = splitWord.reverse('').join('');
+  return console.log(para1 === reverseWord);
+};
+
+palindromes2('racecar');
+console.log( palindromes('racecar') );
 
 // Do not edit below this line
 module.exports = palindromes;
